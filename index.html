@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="Ecoheroes_Salvar_el_planeta-removebg-preview.png" class="titulo" alt="Título">
+        <div class="botones">
+            <button id="nuevaPartida" onclick="nuevaPartida()">Nueva Partida</button>
+            <button id="continuar" onclick="continuar()">Continuar</button>
+            <button id="opciones" onclick="opciones()">Opciones</button>
+            <button id="salir" onclick="salir()">Salir</button>
+        </div>
+        <p class="demo-message">
+            esto es un demo, la version completa saldra algun dia, no fecha definida.
+            <br>
+            estate atento a las noticias que vayamos diciendo.
+        </p>
+        <div class="portafolios">
+            <p>Portafolios de los autores</p>
+            <a href="arnau-droide.github.io-main/index.html" target="_blank">Arnau</a>
+            <br>
+            <a href="safarria.github.io-main/index.html" target="_blank">Eduardo</a>
+        </div>
+    </div>
+    <script>
+        function nuevaPartida() {
+            window.location.href = "../juego/Salva el mundo.html";
+        }
+
+        function continuar() {
+            alert("Continuar");
+        }
+
+        function opciones() {
+            alert("Opciones");
+        }
+
+        function salir() {
+            alert("Salir");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+/*
+Hay varios font-face que me gustaría poner para hacer un estilo "profesional", pero más a mi agrado
+*/
+
+@font-face {
+    font-family: "SpaceMono";
+    src: url(fonts/Space_Mono/SpaceMono-Bold.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "Arima";
+    src: url(fonts/Arima,Space_Mono/Arima/Arima-VariableFont_wght.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+Ignorar el siguiente formato de "body", es solo para darle el color de fondo,
+no tiene mucha relevancia en el resto.
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF4E4;
+}
+
+/*
+Aquí esta situado el Header
+*/
+
+nav {
+    background-color: #4D2D52;
+    position: fixed; /* Al usar "position: fixed" hacemos que el elemento se fije en la pantalla */
+    top: 0; /* Si queremos que el elemento se fije en la parte superior de la pantalla, lo mejor es poner "top: 0" */
+    width: 100%; /* Nos aseguramos que ocupe el 100% */
+    z-index: 1000; /* Y nos aseguramos que quede superpuesto a otros elementos */
+}
+
+nav a {
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/*
+Es importante separar los elementos del html
+*/
+
+img {
+    width: 300px;
+    height: auto;
+}
+
+/*
+"me" es parte del titulo que esta mi nombre
+*/
+
+.me {
+    background-image: url('images/myvillage.jpg'); /* Esto hace que se pueda poner una imagen de fondo en vez de un color */
+    background-size: cover; /* Podemos hacer que la imagen se ajuste a la pantalla de forma perfecta */
+    background-position: center;/* Así hacemos que la imagen se centre, pero si quisieramos mostrar otra parte de la imagen, es tan facil como cambiar "center" por "top" o "bottom" */
+    color: #2B2C28;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 200px;
+    margin: 0;
+    font-family: "SpaceMono";
+}
+
+/*
+Todo el codigo de debajo es el "about"
+*/
+
+.about {
+    width: 750px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #5E747F;
+    text-align: center;
+    font-family: "Arima";
+  }
+
+.about p {
+    color: #DADAD9;
+    font-size: 25px;
+  }
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: peru;
+}
+
+/*
+Situado los proyectos (creditos a chatgpt, la verdad; menos el titulo)
+*/
+
+h2 {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 70px;
+    margin: 0;
+    font-family: "SpaceMono";
+}
+
+/*
+General estilos para la sección y el artículo
+*/
+
+.articles {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en varias filas si es necesario */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding: 20px;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    align-items: center; /* Centra las tarjetas verticalmente en el contenedor */
+  }
+  
+  /* Estilo de la tarjeta (similar al ejemplo anterior) */
+  .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* Previene que la tarjeta se reduzca de tamaño */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-content {
+    transform: translateY(0);
+  }
+  
+  .card:hover .card-content {
+    transform: translateY(100%);
+  }
+  
+  .card h2 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+  }
+  
+  .card p {
+    margin: 0;
+    font-size: 1rem;
+  }  
+
+/*
+Le pedí a chatgpt que diera ayuda con circulos de skills
+*/
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilo de cada círculo de habilidad */
+
+.skill-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.outer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4caf50 0% 80%, /* Nivel de HTML */
+    #ddd 80% 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  width: 90px;
+  height: 90px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.inner span {
+  display: block;
+  text-align: center;
+}
+
+.skill-circle:nth-child(1) .outer {
+  background: conic-gradient(#4CAF50 0% 80%, #ddd 80% 100%);
+}
+
+.skill-circle:nth-child(2) .outer {
+  background: conic-gradient(#2196F3 0% 50%, #ddd 50% 100%);
+}
+
+/*
+Solo el formato de la descripción de los skills (gracias Chatgpt)
+*/
+
+.columns {
+  display: flex;
+  gap: 30px; /* Nos da un espacio entre columnas */
+  padding-left: 30px;
+}
+
+.columns p {
+  font-family: 'Lucida Sans';
+  font-size: 30px;
+  flex: 1; /* Hace que cada columna ocupe el mismo ancho */
+  margin: 0;
+  font-weight: bold;
+  color: black;
+}
+
+
+/*
+Esto es para el footer, intentaré darle un color diferente
+*/
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #FAF0CA;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.quote {
+    font-style: italic;
+}
+
+/*
+Esto de aquí abajo es lo de cookies
+*/
+
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cookie-consent p {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.accept-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.cookie-consent-checkbox {
+    display: none; /* Oculta el checkbox */
+}
+
+.cookie-consent-checkbox:checked + .cookie-consent {
+    display: none; /* Oculta el mensaje cuando el checkbox está marcado */
+}
+
+
+.container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.2s ease; /* Transición suave */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #5cb85c; /* Cambia el color del borde al enfocar */
+  transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}

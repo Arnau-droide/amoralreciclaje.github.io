@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patos: La Saga</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url(soldado-dibujos-animados-pato-lindo-fondo-pantalla-hd-sonriente_930284-39.avif); /* Cambia la ruta a tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: green;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            background-color: red;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .row {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+        .description {
+            margin-top: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .blue { color: blue; }
+        .yellow { color: yellow; }
+        .red { color: red; }
+    </style>
+</head>
+<body>
+
+    <h1>Patos: la saga</h1>
+
+    <div class="container">
+        <!-- Primera fila de imágenes y texto -->
+        <div class="row">
+            <div>
+                <img src="imagen1.png" alt="Patos 1" onclick="window.location.href='par'">
+                <p class="description blue">Patos: una misión patuna!</p>
+            </div>
+            <div>
+                <img src="imagen2.png" alt="Patos 2" onclick="window.location.href='patos2.html'">
+                <p class="description yellow">Patos 2: el robo del pan dorado</p>
+            </div>
+            <div>
+                <img src="imagen3.1.png" alt="Patos 3" onclick="window.location.href='patos3.html'">
+                <p class="description red">Patos 3: Misión Siberia</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Este script cambia la URL cuando se hace clic en una imagen para redirigir a una nueva página.
+        // Las páginas 'patos1.html', 'patos2.html', 'patos3.html' deben contener el resumen de cada película.
+    </script>
+
+</body>
+</html>

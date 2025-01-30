@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Bertomeu Pérez</title>
+    <style>
+        /* Estilos para el body */
+        body {
+            margin: 0; /* Elimina el margen por defecto del body */
+            font-family: Arial, sans-serif; /* Establece la fuente del documento */
+        }
+
+        /* Estilos para el header */
+        header {
+            background-image: url('../soldado-dibujos-animados-pato-lindo-fondo-pantalla-hd-sonriente_930284-39.avif'); /* Establece la imagen de fondo del header */
+            background-size: cover; /* Hace que la imagen de fondo cubra todo el header */
+            background-position: center; /* Centra la imagen de fondo */
+            height: 400px; /* Altura del header */
+            display: flex; /* Utiliza flexbox para centrar el contenido */
+            flex-direction: column; /* Coloca los elementos en columna */
+            justify-content: center; /* Centra verticalmente el contenido */
+            align-items: center; /* Centra horizontalmente el contenido */
+            color: white; /* Color del texto */
+            position: relative; /* Posiciona el header de forma relativa */
+        }
+
+        /* Estilos para el texto del banner */
+        .banner-text {
+            font-size: 36px; /* Tamaño de la fuente del texto */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra del texto para mejorar la legibilidad */
+        }
+
+        /* Estilos para la imagen del banner */
+        .banner-image {
+            width: 100px; /* Ancho de la imagen del banner */
+            margin-top: 20px; /* Espacio superior de la imagen */
+        }
+
+        /* Estilos para el menú de navegación */
+        nav {
+            position: absolute; /* Posiciona el menú de forma absoluta dentro del header */
+            top: 20px; /* Espacio desde la parte superior */
+            left: 20px; /* Espacio desde la izquierda */
+        }
+
+        /* Estilos para los enlaces del menú */
+        nav a {
+            color: white; /* Color de los enlaces */
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+            margin: 0 15px; /* Espacio horizontal entre los enlaces */
+            font-size: 18px; /* Tamaño de la fuente de los enlaces */
+        }
+
+        /* Estilos para el hover de los enlaces */
+        nav a:hover {
+            text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+        }
+
+        /* Estilos para el div de cookies */
+        .cookie-banner {
+            position: fixed; /* Posiciona el div de cookies de forma fija */
+            bottom: 20px; /* Espacio desde la parte inferior */
+            left: 20px; /* Espacio desde la izquierda */
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+            color: white; /* Color del texto */
+            padding: 15px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+            z-index: 1000; /* Asegura que el div esté por encima de otros elementos */
+        }
+
+        /* Estilos para el botón de aceptar cookies */
+        .cookie-button {
+            background-color: #4CAF50; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            padding: 10px 15px; /* Espaciado interno del botón */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        }
+
+        /* Estilos para el botón al pasar el ratón */
+        .cookie-button:hover {
+            background-color: #45a049; /* Color de fondo al pasar el ratón */
+        }
+
+        /* Estilos para el contenedor de preguntas */
+        .questions-container {
+            margin: 40px auto; /* Margen superior e inferior, centrado horizontalmente */
+            width: 80%; /* Ancho del contenedor */
+            max-width: 600px; /* Ancho máximo del contenedor */
+            border: 1px solid #ccc; /* Borde del contenedor */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 20px; /* Espaciado interno */
+            background-color: #f9f9f9; /* Color de fondo del contenedor */
+        }
+
+        /* Estilos para cada pregunta */
+        .question {
+            margin-bottom: 15px; /* Espacio inferior entre preguntas */
+            font-weight: bold; /* Negrita para las preguntas */
+        }
+
+        /* Estilos para las respuestas */
+        .answer {
+            margin-left: 10px; /* Espacio a la izquierda de las respuestas */
+            font-size: 14px; /* Tamaño de la fuente de las respuestas */
+            color: #555; /* Color del texto de las respuestas */
+        }
+
+        /* Estilos para la cuadrícula de proyectos */
+        .projects-container {
+            display: grid; /* Utiliza grid para la disposición de los proyectos */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Crea columnas responsivas */
+            gap: 20px; /* Espacio entre los proyectos */
+            margin: 40px auto; /* Margen superior e inferior, centrado horizontalmente */
+            width: 80%; /* Ancho del contenedor */
+            max-width: 1200px; /* Ancho máximo del contenedor */
+        }
+
+        /* Estilos para cada proyecto */
+        .project {
+            border: 1px solid #ccc; /* Borde del proyecto */
+            border-radius: 10px; /* Bordes redondeados */
+            overflow: hidden; /* Oculta el desbordamiento */
+            background-color: #fff; /* Color de fondo del proyecto */
+            text-align: center; /* Centra el texto */
+        }
+
+        /* Estilos para la imagen del proyecto */
+        .project img {
+            width: 100%; /* Ancho completo de la imagen */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+
+        /* Estilos para el título del proyecto */
+        .project-title {
+            font-weight: bold; /* Negrita para el título */
+            margin: 10px 0; /* Margen superior e inferior */
+        }
+
+        /* Estilos para la descripción del proyecto */
+        .project-description {
+            font-size: 14px; /* Tamaño de la fuente de la descripción */
+            color: #555; /* Color del texto de la descripción */
+            padding: 0 10px; /* Espaciado horizontal */
+            margin-bottom: 10px; /* Margen inferior */
+        }
+
+        /* Estilos para la sección de habilidades */
+        .skills-section {
+            margin: 40px auto; /* Margen superior e inferior, centrado horizontalmente */
+            width: 80%; /* Ancho del contenedor */
+            max-width: 600px; /* Ancho máximo del contenedor */
+            padding: 20px; /* Espaciado interno */
+            background-color: #f0f0f0; /* Color de fondo de la sección */
+            border-radius: 10px; /* Bordes redondeados */
+            text-align: center; /* Centra el texto */
+        }
+
+        /* Estilos para la tabla de habilidades */
+        .skills-table {
+            width: 100%; /* Ancho completo de la tabla */
+            border-collapse: collapse; /* Colapsa los bordes de la tabla */
+            margin-top: 20px; /* Margen superior de la tabla */
+        }
+
+        /* Estilos para las celdas de la tabla */
+        .skills-table th, .skills-table td {
+            border: 1px solid #ccc; /* Borde de las celdas */
+            padding: 10px; /* Espaciado interno de las celdas */
+            text-align: center; /* Centra el texto en las celdas */
+        }
+
+        /* Estilos para los enlaces */
+        .links-section a {
+            display: inline-block; /* Muestra los enlaces en línea */
+            margin: 10px; /* Margen entre los enlaces */
+            text-decoration: none; /* Elimina el subrayado */
+            color: #007BFF; /* Color del texto de los enlaces */
+            font-size: 18px; /* Tamaño de la fuente de los enlaces */
+        }
+
+        /* Estilos para el hover de los enlaces */
+        .links-section a:hover {
+            text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+        }
+
+        /* Estilos para el formulario de contacto */
+        .contact-form {
+            margin: 40px auto; /* Margen superior e inferior, centrado horizontalmente */
+            width: 80%; /* Ancho del cont enedor */
+            max-width: 600px; /* Ancho máximo del contenedor */
+            padding: 20px; /* Espaciado interno */
+            background-color: #f9f9f9; /* Color de fondo del formulario */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+
+        /* Estilos para los campos del formulario */
+        .contact-form input, .contact-form textarea {
+            width: 100%; /* Ancho completo de los campos */
+            padding: 10px; /* Espaciado interno */
+            margin: 10px 0; /* Margen superior e inferior */
+            border: 1px solid #ccc; /* Borde del campo */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        /* Estilos para el botón de envío */
+        .contact-form button {
+            background-color: #4CAF50; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            padding: 10px 15px; /* Espaciado interno del botón */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            margin-top: 10px; /* Margen superior del botón */
+        }
+
+        /* Estilos para el botón al pasar el ratón */
+        .contact-form button:hover {
+            background-color: #45a049; /* Color de fondo al pasar el ratón */
+        }
+
+        /* Estilos para el pie de página */
+        footer {
+            text-align: center; /* Centra el texto del pie de página */
+            padding: 20px; /* Espaciado interno */
+            background-color: #f0f0f0; /* Color de fondo del pie de página */
+            position: relative; /* Posiciona el pie de página de forma relativa */
+            bottom: 0; /* Asegura que esté al final de la página */
+            width: 100%; /* Ancho completo del pie de página */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="banner-text">Eduardo Bertomeu Pérez</div>
+    <img src="un logo con una espada con empuñadura de leon y un caballo de Troya.png" alt="Banner" class="banner-image">
+    <nav>
+        <a href="#quien-soy">¿Quién soy?</a>
+        <a href="#que-he-estudiado">¿Qué he estudiado?</a>
+        <a href="#donde-he-trabajado">¿Dónde he trabajado?</a>
+        <a href="#descripcion">Pequeña descripción</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<div class="cookie-banner" id="cookie-banner">
+    Este sitio utiliza cookies. <button class="cookie-button" onclick="acceptCookies()">Aceptar</button>
+</div>
+
+<div class="questions-container">
+    <div id="quien-soy" class="question">¿Quién soy?
+        <div class="answer">Soy Eduardo.</div>
+    </div>
+    <div id="que-he-estudiado" class="question">¿Qué he estudiado?
+        <div class="answer">He estudiado en el colegio Hermanos Corazón Maristas y la FP en el colegio "Sorolla".</div>
+    </div>
+    <div id="donde-he-trabajado" class="question">¿Dónde he trabajado?
+        <div class="answer">He trabajado en la panadería de mi tío, ayudándole con las ventas.</div>
+    </div>
+    <div id="descripcion" class="question">Pequeña descripción:
+        <div class="answer">Soy un chaval de 20 años, estudiante de Sistemas Microinformáticos y Redes en una de las FP del colegio "Sorolla". Soy un chaval solidario, alegre, amante del deporte y el camping, tengo bastantes títulos...</div>
+    </div>
+</div>
+
+<div id="proyectos" class="projects-container">
+    <div class="project">
+        <a href="../ed.html"><img src="../DALL·E 2024-10-21 13.23.51 - Three military ducks wearing camouflage uniforms and helmets, standing in formation with a blurred background of a larger goose, slightly faded. The d.png" alt="Proyecto 1"></a>
+        <div class="project-title">la saga patuna</div>
+        <div class="project-description"> la trilogia de las peliculas mas patunas de la historia</div>
+    </div>
+    <div class="project">
+        <a href="../PRUEBA 2.html"><img src="../trabajo3/dancingunicorn.gif" alt="Proyecto 2"></a>
+        <div class="project-title">unicornio bailarin</div>
+        <div class="project-description">un unicornio bailarin durante eternamente</div>
+    </div>
+    <div class="project">
+        <a href="../trabajoimgaen/felix.html"><img src="../trabajoimgaen/el futuro es hoy.jpg" alt="Proyecto 3"></a>
+        <div class="project-title">tabla de fotetes</div>
+        <div class="project-description">una tabla de imagenes random hechas por una IA</div>
+    </div>
+    <div class="project">
+        <a href="../tarea 343/tarea2.html"><img src="../tarea 343/stop.gif" alt="Proyecto 4"></a>
+        <div class="project-title">tabla de reparos</div>
+        <div class="project-description">tabala de arreglos de tablas, listas y enlaces</div>
+    </div>
+    <div class="project">
+        <a href="../trabajo3/trabajo.html"><img src="../legendary steel_fighting type Pokemon based on the Trojan Horse.png" alt="Proyecto 5"></a>
+        <div class="project-title">tabla de bailarines</div>
+        <div class="project-description">Dtabla de unicornios bailarines que no se detienen</div>
+    </div>
+    <div class="project">
+        <a href="../caprtea css/index.html"><img src="../DALL·E 2024-10-21 13.23.55 - Three blue ducks chasing a tuxedo-wearing cat that is holding a piece of bread while fleeing in a speedboat during a sunset. The ducks are flying in f.webp" alt="Proyecto 6"></a>
+        <div class="project-title">resumen patuno</div>
+        <div class="project-description">resumen de la saga de los patitos mas pesados y valientes del cine</div>
+    </div>
+</div>
+
+<div class="skills-section">
+    <h2>Habilidades</h2>
+    <p>He trabajado con distintos tipos de aparatos electrónicos, desde ordenadores a portátiles, e incluso Nintendos 2DS. Hablo español, inglés y valenciano, y puedo escribir en esos idiomas, así como en griego y latín. También me estoy sacando el B1 de inglés.</p>
+</div>
+
+<table class="skills-table">
+    <tr>
+        <th>Habilidad</th>
+        <th>Porcentaje</th>
+    </tr>
+    <tr>
+        <td>HTML5</td>
+        <td>80%</td>
+    </tr>
+    <tr>
+        <td>CSS</td>
+        <td>90%</td>
+    </tr>
+</table>
+
+<div id="contacto" class="contact-form">
+    <h2>Contacto</h2>
+    <p>Si quieres contratarme, ¡llámame!</p>
+    <form>
+        <input type="text" name="nombre" placeholder="Nombre" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<footer>
+    <p>©2024 Eduardo</p>
+</footer>
+
+<script>
+    function acceptCookies() {
+        document.getElementById('cookie-banner').style.display = 'none'; // Oculta el banner de cookies
+    }
+</script>
+
+</body>
+</html>

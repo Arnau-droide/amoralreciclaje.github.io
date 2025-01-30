@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/logo_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Portafolio</title>
+</head>
+<body>
+    <input type="checkbox" id="cookie-consent-checkbox" class="cookie-consent-checkbox" />
+    <div class="cookie-consent">
+        <label for="cookie-consent-checkbox">
+            <p>Este sitio web utiliza cookies para mejorar su experiencia. Al hacer clic en "Aceptar", usted acepta el uso de cookies.</p>
+            <span class="accept-button">Aceptar</span>
+        </label>
+    </div>
+    <header>
+        <!-- El ul de debajo es para que haya una lista superior de navegación para ir entre partes del portafolio -->
+        <nav>
+            <a href="#gallery"> Gallery </a>
+            <a href="#skills"> Skills </a>
+            <a href="#contact"> Contact </a>
+        </nav>
+        <div class="me">
+            <img src="images/logo.svg" alt="el logo de arnau ferrer" class="logo"> <!-- Este es el logo, no preguntar por que es svg -->
+            <h1> Arnau Ferrer </h1>
+        </div>
+    </header>
+    <h2> About me </h2>
+    <section class="about">
+        <p> Mi nombre es <b> Arnau Ferrer; </b> vivo en España, más concretamente en <b> Valencia. </b> </p>
+        <!-- Puse la provincia por seguridad, no quería poner la ciudad -->
+        <br>
+        <p> Actualmente estoy estudiando <b> informática; </b> soy alegre, trabajador y me gusta el trabajo en equipo. </p>
+        <p> Mis redes sociales son: </p>
+        <div class="social-icons">
+            <!-- Soy consciente que te lleva a las paginas de cada red social y no a mis redes, ya que no tengo de ese estilo por ahora -->
+            <a href="https://facebook.com" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+            <a href="https://instagram.com" target="_blank"> <i class="fab fa-instagram"></i> </a>
+            <a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter"></i> </a>
+        </div>
+    </section>
+    <h2 id="gallery"> Projects </h2>
+    <section class="articles" id="skills">
+        <a href="projects/Proyecto 1/proyectone.html" target="_blank">
+            <article class="card">
+                <figure>
+                    <img src="images/machu.jpg" alt="Imagen del Machu Pichu" />
+                </figure>
+                <div class="card-content">
+                    <h2> Mi primer proyecto </h2>
+                    <p> Este proyecto fue sobre una mini guia de viaje de ciertos aspectos importantes antes de ir a un país </p>
+                </div>
+            </article>
+        </a>
+
+        <a href="projects/CSS-HTML Cajas y posicionamiento/boxes.html" target="_blank">
+            <article class="card">
+                <figure>
+                    <img src="images/box_in_box.jpg" alt="Imagen de una caja dentro de una caja" />
+                </figure>
+                <div class="card-content">
+                    <h2> Cajas y posiciones </h2>
+                    <p> Fue una tarea para saber como funcionan las cajas y el posicionamiento </p>
+                </div>
+            </article>
+        </a>
+
+        <a href="projects/CSS - Links y Tablas/tables.html" target="_blank">
+            <article class="card">
+                <figure>
+                    <img src="images/ancre.jpg" alt="Imagen de un ancla" />
+                </figure>
+                <div class="card-content">
+                    <h2> Links y Tablas </h2>
+                    <p> Fue una tarea para saber como usar los links y las tablas </p>
+                </div>
+            </article>
+        </a>
+    </section>
+    <h2> Skills </h2>
+    <section>
+        <div class="skills">
+            <div class="skill-circle">
+                <div class="outer">
+                    <div class="inner">
+                        <span>HTML</span>
+                        <span>80%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-circle">
+                <div class="outer">
+                    <div class="inner">
+                        <span>CSS</span>
+                        <span>50%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns">
+            <p>Mi habilidad con HTML es básica, pero creo que es más que suficiente, ya que tienes que saber hacer tablas, listas y varios elementos más.</p>
+            <p>Mi habilidad CSS es básica, sabiendo cómo usar ciertos elementos avanzados, pero no es mi fuerte, aún.</p>
+        </div>          
+    </section>
+    <h2 class="Contact" id="contact"> Contact </h2>
+    <section>
+        <div class="container">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <!-- "ins" viene de "inspiration" y "copy" de "copyright" -->
+        <div class="footer-content">
+            <p class="quote"> "Si subes al tren erroneo, bajate en la siguiente parada y toma el tren correcto, cuanto más tardes, más daño te harás" </p>
+            <p class="copyright">&copy; 2024 Arnau Ferrer. Todos los derechos reservados</p>
+        </div>
+    </footer>
+</body>
+</html>
